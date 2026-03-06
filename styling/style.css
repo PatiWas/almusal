@@ -1,14 +1,21 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: FFEBF0;
+  width: 100vw;
+  background-color: #FFEBF0;
 }
 
 header {
+  width: 100vw;
+  height: auto;
+  background-color: #FFEBF0;
+  padding: 0;
   position: relative;
-  max-width: 402px;
 }
 
+div.header_image {
+  position: relative;
+  width: 100vw;
+  height: auto;
+}
 
 h1 {
   font-family: 'Mansalva';
@@ -40,9 +47,27 @@ p {
 }
 
 div.header_image {
-  position: relative;
+display: flex;
   width: 100%;
 } 
+
+div.header_text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+div.header_text h1,
+div.header_text h3 {
+  color: black;
+}
+
+
+img {
+  width: 30vw;
+  height: auto;
+}
 
 button {
   font-family: 'Montserrat';
