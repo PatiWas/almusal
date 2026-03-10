@@ -1,20 +1,8 @@
 body {
   width: 100vw;
   background-color: #FFEBF0;
-}
-
-header {
-  width: 100vw;
-  height: auto;
-  background-color: #FFEBF0;
-  padding: 0;
-  position: relative;
-}
-
-div.header_image {
-  position: relative;
-  width: 100vw;
-  height: auto;
+  flex-direction: column;
+  margin: 0;
 }
 
 h1 {
@@ -46,26 +34,58 @@ p {
   color: black;
 }
 
-div.header_image {
-display: flex;
-  width: 100%;
-} 
-
-div.header_text {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
+div {
+  position: relative;
+  display: block;
 }
 
-div.header_text h1,
-div.header_text h3 {
+header {
+  width: 100vw;
+  height: auto;
+  background-color: #FFEBF0;
+  padding: 0;
+  position: absolute;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+.hero_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+
+}
+
+div.hero_text {
+  text-align: center;
+  z-index: +1;
+}
+
+div.hero_text h1,
+div.hero_text h3 {
   color: black;
 }
 
+div.hero_image {
+  width: 100%;
+} 
 
 img {
-  width: 30vw;
+  width: 100vw;
   height: auto;
 }
 
