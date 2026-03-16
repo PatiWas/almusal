@@ -7,6 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styling/style.css"/>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.nav_accordeon_01, .nav_accordeon_02');
+        
+        buttons.forEach(button => {
+          button.addEventListener('click', function() {
+            const panel = this.nextElementSibling;
+            
+            // Close other panels in the same section
+            const allPanels = document.querySelectorAll('.acc_panel');
+            allPanels.forEach(p => {
+              if (p !== panel) {
+                p.classList.remove('active');
+                const associated = p.previousElementSibling;
+                if (associated && (associated.classList.contains('nav_accordeon_01') || associated.classList.contains('nav_accordeon_02'))) {
+                  associated.classList.remove('active');
+                }
+              }
+            });
+            
+            // Toggle current panel
+            if (panel && panel.classList.contains('acc_panel')) {
+              panel.classList.toggle('active');
+              this.classList.toggle('active');
+            }
+          });
+        });
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -41,6 +70,7 @@
             <img
               src="./img/menu_day_image.png"
               alt="menu of the day image showing food">
+            <h2>Toksilog</h2>
           </div>
         </section>
           <section id="menu_meals">
