@@ -1,8 +1,29 @@
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   width: 100vw;
   background-color: #FFEBF0;
+  display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
   margin: 0;
+  padding: 0;
+}
+
+.content {
+  min-height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -10,6 +31,9 @@ h1 {
   font-size: 24px;
   text-transform: uppercase;
   color: black;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 h2 {
@@ -17,6 +41,9 @@ h2 {
   font-size: 20px;
   text-transform: uppercase;
   color: black;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 h3 {
@@ -26,32 +53,40 @@ h3 {
   letter-spacing: 10%;
   text-transform: uppercase;
   color: black;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 p {
   font-family: 'Montserrat';
   font-size: 16px;
   color: black;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 div {
   position: relative;
   display: block;
+  margin: 0;
 }
 
 header {
   width: 100vw;
-  height: auto;
+  height: 60px;
   background-color: #FFEBF0;
   padding: 0;
-  position: absolute;
 }
 
 .hero {
-  height: 80vh;
+  height: calc(100vh - 120px);
+  min-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 .hero_image {
@@ -86,7 +121,7 @@ div.hero_image {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin: 50px;
+  margin: 0;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -103,15 +138,16 @@ div.hero_image {
 }
 
 #menu_day .acc_panel {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
+  justify-items: center;
   max-width: 500px;
-  margin: 50px auto;
+  margin: 0 auto;
 }
 
 #menu_day .acc_panel.active {
-  display: flex;
+  display: grid;
 }
 
 #menu_day .acc_panel img {
@@ -153,6 +189,13 @@ button {
   color: white;
   letter-spacing: 10%;
   text-transform: uppercase;
+  margin: 0;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 .nav_accordeon_01 {
@@ -197,7 +240,8 @@ button {
   }
 
   .hero {
-    height: auto;
+    height: 50vh;
+    min-height: 300px;
     flex-direction: column;
     padding: 20px;
   }
@@ -206,7 +250,7 @@ button {
   #menu_day .acc_panel,
   #menu_meals .acc_panel,
   #menu_drinks .acc_panel {
-    margin: 20px 10px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -245,4 +289,50 @@ button {
     font-size: 14px;
     letter-spacing: 6%;
   }
+}
+
+footer {
+  background-color: #0E543D;
+  padding: 20px 0;
+}
+
+.title_bar {
+  background-color: #0E543D;
+  padding: 10px 50px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+.footer {
+  color: #ffffff;
+  text-align: center;
+}
+
+.title_bar h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.footer h1,
+.footer p {
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.acc_panel_op,
+.acc_panel {
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.acc_panel_op:not(.active),
+.acc_panel:not(.active) {
+  padding: 0;
+}
+
+.acc_panel_op p {
+  margin: 0 0 8px;
+  line-height: 1.6;
 }
