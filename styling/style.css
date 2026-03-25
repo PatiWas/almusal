@@ -212,9 +212,15 @@ section {
 
 .nav_accordeon_01::after,
 .nav_accordeon_02::after {
-  content: '▼';
+  content: url('./img/arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
   margin-right: 50px;
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .nav_accordeon_01.active::after,
@@ -298,7 +304,7 @@ footer {
 
 .title_bar {
   background-color: #0E543D;
-  padding: 10px 50px;
+  padding: 18px 50px;
   color: #ffffff;
   text-align: center;
   margin: 0;
@@ -335,4 +341,10 @@ footer {
 .acc_panel_op p {
   margin: 0 0 8px;
   line-height: 1.6;
+  text-align: left;
+}
+
+#opening_hours .acc_panel {
+  text-align: left;
+  display: block;
 }

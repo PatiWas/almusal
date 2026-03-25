@@ -29,8 +29,16 @@
             
             // Toggle current panel
             if (panel && panel.classList.contains('acc_panel')) {
+              const wasActive = panel.classList.contains('active');
               panel.classList.toggle('active');
               this.classList.toggle('active');
+              
+              // Scroll to the top of the viewport when opening
+              if (!wasActive && panel.classList.contains('active')) {
+                setTimeout(() => {
+                  this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+              }
             }
           });
         });
