@@ -111,6 +111,7 @@ div.hero_text {
 div.hero_text h1,
 div.hero_text h3 {
   color: black;
+  margin-top: 20px;
 }
 
 div.hero_image {
@@ -158,6 +159,7 @@ div.hero_image {
 #menu_day .acc_panel h2 {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 div.meal_item {
@@ -215,7 +217,7 @@ section {
   content: '〉';
   width: 24px;
   height: 24px;
-  margin-right: 50px;
+  margin-right: 30px;
   transition: transform 0.3s ease;
   display: inline-block;
 }
@@ -234,7 +236,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
+  cursor: move;
 }
 
 @media screen and (max-width: 768px) {
